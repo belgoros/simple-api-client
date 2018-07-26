@@ -4,14 +4,7 @@ require('dotenv').config()
 
 module.exports = function(deployTarget) {
   let ENV = {
-    build: {},
-
-    s3: {
-      accessKeyId: process.env.AWS_ACCESS_KEY,
-      secretAccessKey: process.env.AWS_SECRET_KEY,
-      bucket: 'simple-api-client',
-      region: 'eu-central-1'
-    }
+    build: {}
   };
 
   if (deployTarget === 'development') {
@@ -26,7 +19,19 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
-    // configure other plugins for production deploy target here
+    ENV.s3 = {
+      accessKeyId: process.env.AWS_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
+      bucket: 'simple-api-client',
+      region: 'eu-central-1'
+    };
+
+     ENV['s3-index'] = {
+      accessKeyId: process.env.AWS_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
+      bucket: 'simple-api-client',
+      region: 'eu-central-1'
+    };
   }
 
   // Note: if you need to build some configuration asynchronously, you can return
