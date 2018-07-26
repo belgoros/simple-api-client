@@ -1,10 +1,17 @@
 /* eslint-env node */
 'use strict';
+require('dotenv').config()
 
 module.exports = function(deployTarget) {
   let ENV = {
-    build: {}
-    // include other plugin configuration that applies to all deploy targets here
+    build: {},
+
+    s3: {
+      accessKeyId: process.env.AWS_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_KEY,
+      bucket: 'simple-api-client',
+      region: 'eu-central-1'
+    }
   };
 
   if (deployTarget === 'development') {
