@@ -44,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'https://shrouded-basin-32681.herokuapp.com/'
+    ENV.apiHost = 'https://shrouded-basin-32681.herokuapp.com'
   }
 
   return ENV;
