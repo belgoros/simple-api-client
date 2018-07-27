@@ -21,7 +21,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-Actually only `articles` resource is created. So to see it in action, just run from your terminal:
+The application is using Rails 5 API backend, see [simple-api](https://github.com/belgoros/simple-api) code source for more details.
+start up the back-end API and pass its url to ember
 
-* `ember serve`
-* visit your app at [http://localhost:4200/articles](http://localhost:4200/articles) to see available articles.
+* `ember serve --proxy=http://localhost:3000`
+* visit your app at [http://localhost:4200
