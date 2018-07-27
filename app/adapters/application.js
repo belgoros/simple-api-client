@@ -1,7 +1,6 @@
 import DS from 'ember-data';
-//import ENV from 'rarwe/config/environment';
-import config from '../config/environment';
+import ENV from 'simple-api-client/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
-  host: config.apiHost
+  host: ENV.apiHost
 });
