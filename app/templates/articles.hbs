@@ -1,3 +1,8 @@
-{{#each model as |article|}}
-  {{article.name}}/<b>{{article.category.name}}</b><br>
-{{/each}}
+<h3>Articles</h3>
+<div>
+  <ul>
+    {{#each model as |article|}}
+      <li>{{article.name}} [<b>{{article.category.name}}</b>]</li>
+    {{/each}}
+  </ul>
+</div>
