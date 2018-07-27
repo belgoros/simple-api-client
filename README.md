@@ -1,7 +1,6 @@
 # simple-api-client
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember 3 application deployed at AWS S3 and using Rails 5 as back-end API deployed at Heroku.
 
 ## Prerequisites
 
